@@ -211,23 +211,23 @@
     <h1 style="text-align:center">HTML form exercise</h1>
     <p> <font color="red">Please Note:</font> This example demontrates how HTML pages can be used. Submit button should submit the form and Reset button should reset the form(revert the changes in the form fields).The form layout should be same as below</p>
       &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;<b>Contact Form:</b>
-      <form name="new_form" method="POST" action="www.mydomain.com">
+      <form name="new_form" method="POST" target="blank"  onsubmit="myFunction()">
         <table border="0" cellspacing="0" width="100%">
           <tr>
             <td width="16%">Your name*:</td>
-            <td width="84%"><input type="text" name="name" value=""></td>
+            <td width="84%"><input type="text" name="name" value="" required></td>
           </tr>
           <tr>
             <td>E-mail*:</td>
-            <td><input type="text" name="e-mail" value="" style="background-color:yellow;"></td>
+            <td><input type="email" name="e-mail" value="" style="background-color:yellow;" required></td>
           </tr>
           <tr>
             <td>Phone number:</td>
-            <td><input type="text" name="phone" value="" style="background-color:yellow;"></td>
+            <td><input type="number" name="phone" value="" style="background-color:yellow;"></td>
           </tr>
           <tr>
             <td>Website*:</td>
-            <td><input type="text" size="25" name="website" value="http://"></td>
+            <td><input type="text" size="25" name="website" value="http://" required></td>
           </tr>
         </table>
         <br>
@@ -236,7 +236,7 @@
             <td>Comments*:</td>
           </tr>
           <tr >
-            <td ><textarea name="comment" rows="7" cols="28"> </textarea></td>
+            <td ><textarea name="comment" rows="7" cols="28" required > </textarea></td>
           </tr>
         </table>
         <br>
@@ -357,7 +357,7 @@
             </tr>
           </table>    
             </form>
-</td>
+          </td>
  <td width="25%"></td>
 </tr>
  </table>
@@ -415,4 +415,10 @@
 </footer>
   
 </body>
+<script>
+  function myFunction(){
+    alert("Submited Successfully!");
+    location.reload();
+  }
+</script>
 </html>
